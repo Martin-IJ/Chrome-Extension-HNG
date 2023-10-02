@@ -6,7 +6,56 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="popup">
+        <div class="w-[300px] h-[439px] flex flex-col justify-between shadow-lg rounded-[24px] p-[24px]">
+            <div class="flex items-center justify-between">
+                <img src="path/to/logo.png" alt="Logo" class="w-1/2" />
+                <div class="flex items-center gap-3 text-[20px] text-[#120B48]">
+                    Settings Icon
+                    Close Circle Icon
+                </div>
+            </div>
+    
+            <p class="text-[#413C6D]">
+                This extension helps you record and share help videos with ease.
+            </p>
+    
+            <div class="flex justify-evenly">
+                <div class="flex flex-col items-center cursor-pointer text-[#928FAB]">
+                    <img src="path/to/monitor.svg" alt="Monitor" />
+                    <p>Full screen</p>
+                </div>
+                <div class="flex flex-col items-center cursor-pointer">
+                    <img src="path/to/copy.svg" alt="" />
+                    <p>Current Tab</p>
+                </div>
+            </div>
+    
+            <div class="flex items-center justify-between border border-[#100A42] py-[8px] pl-[16px] pr-[12px] rounded-[12px]">
+                <div class="flex items-center text-[#100A42]">
+                    <img src="path/to/video-camera.svg" alt="" />
+                    <p>Camera</p>
+                </div>
+                <button onclick="handleToggleCamera()" class="text-[#120B48] text-[36px]">
+                    Toggle Camera Icon
+                </button>
+            </div>
+    
+            <div class="flex items-center justify-between border border-[#100A42] py-[8px] pl-[16px] pr-[12px] rounded-[12px]">
+                <div class="flex items-center text-[#100A42]">
+                    <img src="path/to/microphone.svg" alt="" />
+                    <p>Audio</p>
+                </div>
+                <button onclick="handleToggleMicrophone()" class="text-[#120B48] text-[36px]">
+                    Toggle Microphone Icon
+                </button>
+            </div>
+    
+            <button onclick="handleRecordings()" class="bg-[#120B48] active:shadow-lg hover:bg-[#413C6D] text-white p-[16px] rounded-[12px]">
+                Start Recording
+            </button>
+        </div>
+    </div>
     <script src="../src/components/PopUp.js"></script>
 </body>
 </html>
