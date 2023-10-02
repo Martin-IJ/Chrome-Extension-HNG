@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Screen Recorder",
+  "version": "1.0.0",
+  "description": "Helps you record and share your screenrecords with others",
+  "permissions": ["scripting", "tabs", "activeTab", "desktopCapture"],
+  "author": "Martins Ohez",
+  "action":{
+      "default_popup": "popup.html",
+      "default_title": "Screen Recorder"
+  },
+  "icons":{
+      "16": "./Vector.png",
+      "32": "./Vector.png",
+      "48": "./Vector.png",
+      "128": "./Vector.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
